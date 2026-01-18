@@ -12,7 +12,9 @@ Core Objectives:
 4. Transpile for a 0-1-2 linear coupling map with basis gates sx, rz, cz.
 
 Hardware Mapping:
+
 Target: Linear Chain (0 ↔ 1 ↔ 2)
+
 Global Phase Result: π/2
 
 Brown_Marion_Coniglio_2024_Figure1.py
