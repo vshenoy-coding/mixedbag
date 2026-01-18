@@ -1,6 +1,22 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+qiskit_first_example_circuit.py
+
+# ==============================================================================
+# SUMMARY: Quantum Non-Locality & Transpilation Proofs
+# ==============================================================================
+
+# Core Objectives:
+1. Prepare GHZ state with specific relative phase (π/2).
+2. Extract expectation values using Qiskit Primtives (Estimator).
+3. Prove non-classicality via Mermin Inequality (Quantum 4 vs Classical 2).
+4. Transpile for a 0-1-2 linear coupling map with basis gates sx, rz, cz.
+
+# Hardware Mapping:
+Target: Linear Chain (0 ↔ 1 ↔ 2)
+Global Phase Result: π/2
+
 Brown_Marion_Coniglio_2024_Figure1.py
 
 Recreation of first figure showing analytic Weisman-Klemp thermodynamic profile and the specific wind profiles modulated by the low-level shear orientation angle α.
