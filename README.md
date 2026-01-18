@@ -33,7 +33,7 @@ Target: Linear Chain (0 ↔ 1 ↔ 2)
 
 Global Phase Result: π/2
 
-Brown_Marion_Coniglio_2024_Figure1.py
+## Brown_Marion_Coniglio_2024_Figure1.py
 
 Recreation of first figure showing analytic Weisman-Klemp thermodynamic profile and the specific wind profiles modulated by the low-level shear orientation angle α.
 
