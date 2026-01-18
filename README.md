@@ -1,6 +1,10 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+## qml_cluster_analysis.py
+
+Implements an unsupervised learning layer over the Quantum Similarity Matrix. It uses Agglomerative Hierarchical Clustering and calculates the Silhouette Score to determine the optimal number of atmospheric regimes. This automates the process of identifying "tipping points" in storm morphology, reducing the need for manual sensitivity tests in the CM1 model.
+
 ## quantum_circuit_parity_plot.py
 
 Recreated foundational proofs of quantum non-locality and provide a robust diagnostic framework for quantum state validation.
