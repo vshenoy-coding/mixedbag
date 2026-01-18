@@ -1,6 +1,36 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+## qnk_vqe_burgers.py
+
+This repository implements a novel pipeline that maps atmospheric thermodynamic environments to Variational Quantum Eigensolver (VQE) states to predict storm morphology. By solving a 1D Burgers' Equation on a quantum backend, we identify "Quantum Signatures" that correspond to specific weather families.
+
+🌪️ The "Quantum-to-Storm" Pipeline
+
+Regime Mapping: Categorizes atmospheric soundings by SBCAPE and SBLCL into three distinct families: Moist, Intermediate, and Dry.
+
+Quantum Fluid Simulation: Solves the Burgers' Equation using a 3-qubit VQE with the EstimatorV2 primitive.
+
+Morphology Classification: Uses Quantum Residual Energy and KL Divergence to predict if a storm will maintain a stable squall line or fragment into discretized cells.
+
+📊 Core Findings
+1. The Fluid-Atmosphere Coupling
+
+A direct correlation was discovered between SBLCL heights and the stability of the VQE solution:
+
+Moist Regime (SBLCL < 1125m): Produces a smooth, single-peak velocity profile with high symmetry (Even Parity) and low residual energy (≈−2.15).
+
+Dry Regime (SBLCL > 1375m): Triggers a "turbulent" bi-modal velocity profile with high residual energy (≈−0.75), signaling a transition to discretized cell morphology.
+
+2. Turbulence Metrics
+|Metric|Moist Regime|Dry Regime|Scientific Significance
+| ---  | ---        | ---      | ---                   |
+|Residual Energy|−2.15|−0.75|"Higher energy indicates a ""stiff"" fluid flow."|
+
+|TV Distance|0.00 (Base)|0.5000| 50% of the fluid mass shifts spatially in dry air.|
+
+|KL Divergence|0.00 (Base)|0.6960| Dry regimes add ~1 bit of informational complexity.|
+
 ## qml_cluster_analysis.py
 
 Implements an unsupervised learning layer over the Quantum Similarity Matrix. It uses Agglomerative Hierarchical Clustering and calculates the Silhouette Score to determine the optimal number of atmospheric regimes. This automates the process of identifying "tipping points" in storm morphology, reducing the need for manual sensitivity tests in the CM1 model.
