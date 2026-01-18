@@ -22,6 +22,7 @@ To create a suite of different simulations, adjust the following parameters with
 In your code, you can define multiple "worlds" to test at once:
 
 # Edit this list to define your experimental members
+```python
 configs = [
     {"sbcape": 2000, "sblcl": 750,  "label": "Experiment_A_Moist"},
     {"sbcape": 2000, "sblcl": 1250, "label": "Experiment_B_Intermediate"},
@@ -38,7 +39,7 @@ After running the script, the save_cm1_sounding function will generate a text fi
 
 3. Ensure your namelist.input in CM1 is set to read from an external sounding file (isnd = 3).
 
-**Why These Variables?&&
+**Why These Variables?**
 
 The authors of the paper utilized these specific modulations because the LCL (Lifting Condensation Level) acts as a proxy for low-level moisture. By keeping CAPE constant and only moving the LCL, they could determine if a storm's rotation was changed by the moisture itself or the energy of the environment.
 
