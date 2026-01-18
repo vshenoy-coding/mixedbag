@@ -1,6 +1,22 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+quantum_circuit_parity_plot.py
+
+Recreated foundational proofs of quantum non-locality and provide a robust diagnostic framework for quantum state validation.
+
+Quantum Information Implementation:
+
+Parity Visualization: Developed a "Pythonic" workflow to generate parity plots for the complex GHZ state (2​∣000⟩+i∣111⟩​), demonstrating perfect even-parity correlation in the XXY basis.
+
+Mermin Inequality Proof: Executed a classical brute-force simulation using itertools to prove that the maximum local hidden variable outcome is 2.0, sharply contrasted against a measured quantum expectation value of 4.0.
+
+Noise Modeling: Introduced a depolarizing noise model to simulate decoherence and gate errors inherent in real quantum hardware, visually demonstrating the "leakage" or emergence of odd-parity (red) results that are theoretically suppressed in ideal systems.
+
+Fidelity Analysis: Implemented a post-execution diagnostic using Hellinger Fidelity to mathematically quantify the overlap between ideal probability distributions and noisy hardware results, providing a single metric to evaluate state preparation success.
+
+Hardware Transpilation: Utilized the Qiskit transpiler to map idealized circuits to a hardware-specific target (linear 0-1-2 coupling map) using a restricted cz, sx, and rz basis gate set.
+
 qiskit_first_example_circuit.py
 
 Quantum Non-Locality & Transpilation Proofs
