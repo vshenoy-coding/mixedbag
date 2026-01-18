@@ -29,8 +29,34 @@ Dry Regime (SBLCL > 1375m): Triggers a "turbulent" bi-modal velocity profile wit
 |Residual Energy|−2.15|−0.75|"Higher energy indicates a ""stiff"" fluid flow."|
 | --- | --- | --- | --- |
 |TV Distance|0.00 (Base)|0.5000| 50% of the fluid mass shifts spatially in dry air.|
-
+| --- | --- | --- | --- |
 |KL Divergence|0.00 (Base)|0.6960| Dry regimes add ~1 bit of informational complexity.|
+
+🛠️ Technology Stack
+
+Quantum Framework: Qiskit 1.x (utilizing RealAmplitudes functional circuits).
+
+Primitives: EstimatorV2 for hardware-efficient expectation values.
+
+Optimization: Scipy COBYLA for variational parameter tuning.
+
+Physics Engine: Variational solution of the non-linear Burgers' Equation.
+
+🚀 How to Run
+
+The script includes a Smart Dependency Guard to ensure all required packages are installed without manual intervention:
+
+```python
+# Check for qiskit, qiskit-aer, scipy, and matplotlib
+smart_install(["qiskit", "qiskit-aer", "scipy", "matplotlib"])
+
+# Run the VQE Morphological Classifier
+result = classify_storm_morphology(-0.75)
+print(f"Predicted Morphology: {result['Morphology']}")
+```
+Acknowledgments
+
+This work builds upon the storm morphology research of Brown et al., 2024 and utilizes the regime map classification from recent CM1 sensitivity studies.
 
 ## qml_cluster_analysis.py
 
