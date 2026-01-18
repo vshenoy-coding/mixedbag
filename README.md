@@ -3,9 +3,7 @@ A mixed bag of coding projects to work on with no unifying theme.
 
 qiskit_first_example_circuit.py
 
-# ==============================================================================
-# SUMMARY: Quantum Non-Locality & Transpilation Proofs
-# ==============================================================================
+# Quantum Non-Locality & Transpilation Proofs
 
 # Core Objectives:
 1. Prepare GHZ state with specific relative phase (π/2).
