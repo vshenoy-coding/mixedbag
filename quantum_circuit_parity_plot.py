@@ -180,3 +180,79 @@ def plot_noisy_parity(data, basis_name):
     plt.show()
 
 plot_noisy_parity(noisy_data, "XXY")
+
+# What the Red Bars Represent
+
+# The appearance of red in this plot represents State Infidelity. 
+                     
+# In the earlier plot, the quantum interference was "perfect," meaning the probability of an odd outcome was exactly 0.
+
+# In a real-world scenario:
+
+# Gate Errors: The CNOT gates might not flip the target qubit perfectly.
+
+# Decoherence: The phase (π/2) might drift, causing the i to "leak" into real numbers.
+
+# Measurement Error: The hardware might read a 0 as a 1.
+                     
+# This effectively "smears" the probability across all 8 possible states. 
+# The goal of modern quantum research is to use Error Mitigation to push those red bars back down to zero.
+
+# To complete analysis, calculate Fidelity score. 
+# In quantum information, fidelity measures how "close" two quantum states are to one another.
+# In previous plots, noise was shown to cause a "bleed" into odd-parity (red) outcomes that should thereotically be zero.
+# Fidelity quantifies loss of this information.
+
+# Step 4: Pythonic Fidelity Calculation
+# Use a Pythonic approach to calculate Hellinger Fidelity, a robust way to compare two probability distributions (ideal vs. noisy)
+# derived from measurement counts.
+
+from qiskit.quantum_info import hellinger_fidelity 
+
+def calculate_experiment_fidelity(ideal_basis="XXY", error_rate=0.03):
+    """
+    Compares ideal execution against noisy execution
+    using Hellinger Fidelity.
+    """
+    # 1. Setup circuits
+    qc = get_ghz_parity_circuit(ideal_basis)
+
+    # 2. Get Ideal Results
+    ideal_backend = AerSimulator()
+    ideal_counts  = ideal_backend.run(qc, shots=2048).result().get_counts()
+
+    # 3. Get Noisy Results
+    noisy_backend = get_noisy_backend(error_rate=error_rate)
+    noisy_counts  = noisy_backend.run(qc, shots=2048).result().get_counts()
+
+    # 4. Calculate Fidelity
+    # Hellinger Fidelity is 1 for identical distributions, 0 for orthogonal ones.
+    fid = hellinger_fidelity(ideal_counts, noisy_counts)
+
+    print(f"---Fidelity Analysis for {ideal_basis} ---")
+    print(f"Noise Error Rate: {error_rate*100}%")
+    print(f"Hellinger Fidelity: {fid:.4f}")
+
+    if fid > 0.90:
+        print("Status: High Fidelity - Quantum correlations remain strong.")
+    else:
+        print("Status: Low Fidelity - Noise is significantly masking non-locality.")
+    return fid
+
+# Run the calculation
+fidelity_score = calculate_experiment_fidelity("XXY")
+
+# Why this is the Pythonic Conclusion
+
+# Metric Accuracy: We used hellinger_fidelity because it specifically compares 
+# the measurement outcomes (the bars in your plot) rather than the theoretical 
+# statevector, making it more representative of real-world device performance.
+
+# Comparison to Earlier Figures: Just as the Brown et al., 2024 study modulated a 
+# single variable (α) while keeping thermodynamics constant, this logic modulates 
+# the Error Rate while keeping the GHZ State constant.
+
+# Visual Proof: A high fidelity score corresponds to the plot where green bars dominate. 
+# As fidelity drops, you will see the red bars grow in size, 
+# signifying the "leakage" of the quantum phase.
+
