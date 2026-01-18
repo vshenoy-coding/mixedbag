@@ -1,6 +1,10 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+Brown_Marion_Coniglio_2024_Figure1.py
+
+Recreation of first figure showing analytic Weisman-Klemp thermodynamic profile and the specific wind profiles modulated by the low-level shear orientation angle α.
+
 wk_cm1_generator.py
 
 **Quick Start: Running a New Experiment**
