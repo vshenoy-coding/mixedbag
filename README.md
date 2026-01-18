@@ -29,7 +29,7 @@ Dry Regime (SBLCL > 1375m): Triggers a "turbulent" bi-modal velocity profile wit
 |Residual Energy|−2.15|−0.75|"Higher energy indicates a ""stiff"" fluid flow."|
 | --- | --- | --- | --- |
 |TV Distance|0.00 (Base)|0.5000| 50% of the fluid mass shifts spatially in dry air.|
-| --- | --- | --- | --- |
+
 |KL Divergence|0.00 (Base)|0.6960| Dry regimes add ~1 bit of informational complexity.|
 
 ## qml_cluster_analysis.py
