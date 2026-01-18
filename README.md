@@ -1,7 +1,7 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
-quantum_circuit_parity_plot.py
+## quantum_circuit_parity_plot.py
 
 Recreated foundational proofs of quantum non-locality and provide a robust diagnostic framework for quantum state validation.
 
@@ -17,7 +17,7 @@ Recreated foundational proofs of quantum non-locality and provide a robust diagn
 
 **Hardware Transpilation:** Utilized the Qiskit transpiler to map idealized circuits to a hardware-specific target (linear 0-1-2 coupling map) using a restricted cz, sx, and rz basis gate set.
 
-qiskit_first_example_circuit.py
+## qiskit_first_example_circuit.py
 
 **Quantum Non-Locality & Transpilation Proofs**
 
@@ -37,7 +37,7 @@ Brown_Marion_Coniglio_2024_Figure1.py
 
 Recreation of first figure showing analytic Weisman-Klemp thermodynamic profile and the specific wind profiles modulated by the low-level shear orientation angle α.
 
-wk_cm1_generator.py
+## wk_cm1_generator.py
 
 **Quick Start: Running a New Experiment**
 
