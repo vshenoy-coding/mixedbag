@@ -22,6 +22,8 @@ To create a suite of different simulations, adjust the following parameters with
 In your code, you can define multiple "worlds" to test at once:
 
 # Edit this list to define your experimental members
+In your script, you can define multiple "worlds" to test at once by editing the `configs` list. This is the primary way to replicate the sensitivity tests performed in the study.
+
 ```python
 configs = [
     {"sbcape": 2000, "sblcl": 750,  "label": "Experiment_A_Moist"},
