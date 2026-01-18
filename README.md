@@ -28,6 +28,7 @@ configs = [
     {"sbcape": 2000, "sblcl": 1250, "label": "Experiment_B_Intermediate"},
     {"sbcape": 2000, "sblcl": 1750, "label": "Experiment_C_Dry"}
 ]
+```
 
 **3. Exporting to CM1**
 
