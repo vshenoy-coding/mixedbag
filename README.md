@@ -1,7 +1,7 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
-## qnk_vqe_burgers.py
+## qml_vqe_burgers.py
 
 This repository implements a novel pipeline that maps atmospheric thermodynamic environments to Variational Quantum Eigensolver (VQE) states to predict storm morphology. By solving a 1D Burgers' Equation on a quantum backend, we identify "Quantum Signatures" that correspond to specific weather families.
 
@@ -23,6 +23,7 @@ Moist Regime (SBLCL < 1125m): Produces a smooth, single-peak velocity profile wi
 Dry Regime (SBLCL > 1375m): Triggers a "turbulent" bi-modal velocity profile with high residual energy (≈−0.75), signaling a transition to discretized cell morphology.
 
 2. Turbulence Metrics
+   
 |Metric|Moist Regime|Dry Regime|Scientific Significance|
 | ---  | --- | --- | --- |
 |Residual Energy|−2.15|−0.75|"Higher energy indicates a ""stiff"" fluid flow."|
