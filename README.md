@@ -1,6 +1,17 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+*pending*
+
+working with parflow: https://parflow.readthedocs.io/en/latest/pftools.html, https://hydroframe.org/parflow-resources, https://hydroframe.org/parflow-conus1, https://hydroframe.org/parflow-conus2, https://parflow.org/, https://github.com/parflow/parflow
+
+working with hydroframe? https://hydroframe.org/hydrodata
+
+github link https://github.com/HydroFrame-ML/high-res-WTD-static from Ma et al., 2026, "High resolution US water table depth estimates reveal quantity of accessible groundwater" https://www.nature.com/articles/s43247-025-03094-3
+
+working with SUNDIALS? https://sundials.readthedocs.io/en/latest/sundials, https://github.com/llnl/sundials
+
+
 ## qml_vqe_burgers.py
 
 This repository implements a novel pipeline that maps atmospheric thermodynamic environments to Variational Quantum Eigensolver (VQE) states to predict storm morphology. By solving a 1D Burgers' Equation on a quantum backend, we identify "Quantum Signatures" that correspond to specific weather families.
