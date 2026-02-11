@@ -1,9 +1,9 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
-working with parflow: https://parflow.readthedocs.io/en/latest/pftools.html, https://hydroframe.org/parflow-resources, https://hydroframe.org/parflow-conus1, https://hydroframe.org/parflow-conus2, https://parflow.org/, https://github.com/parflow/parflow
+working with parflow (integrated hydrology model that simulates surface and subsurface flow): https://parflow.readthedocs.io/en/latest/pftools.html, https://hydroframe.org/parflow-resources, https://hydroframe.org/parflow-conus1, https://hydroframe.org/parflow-conus2, https://parflow.org/, https://github.com/parflow/parflow
 
-working with hydroframe: https://hydroframe.org/hydrodata, https://hydroframesubsettools.readthedocs.io/en/stable/getting_started.html
+working with hydroframe (repository of hydrologic observations, watershed characteristics and model simulations for the contiguous US): https://hydroframe.org/hydrodata, https://hydroframesubsettools.readthedocs.io/en/stable/getting_started.html
 
 ```python
 import sys
