@@ -1,28 +1,77 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
-*pending*
-
 working with parflow: https://parflow.readthedocs.io/en/latest/pftools.html, https://hydroframe.org/parflow-resources, https://hydroframe.org/parflow-conus1, https://hydroframe.org/parflow-conus2, https://parflow.org/, https://github.com/parflow/parflow
 
 working with hydroframe: https://hydroframe.org/hydrodata, https://hydroframesubsettools.readthedocs.io/en/stable/getting_started.html
 
 ```python
-pip install subsettools
+import sys
+import subprocess
+import os
+
+# 1. Fix the PyYAML conflict to satisfy google-adk without breaking subsettools
+try:
+    import yaml
+    if yaml.__version__ == "6.0.1":
+        print("🔄 Updating PyYAML to satisfy dependency conflicts...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "PyYAML>=6.0.2"])
+except ImportError:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "PyYAML"])
+
+# 2. Pythonic check for remaining packages
+def check_install(package_dict):
+    for import_name, install_name in package_dict.items():
+        try:
+            __import__(import_name)
+        except ImportError:
+            print(f"📦 Installing {install_name}...")
+            subprocess.check_call([sys.executable, "-m", "pip", "install", install_name])
+
+check_install({
+    "subsettools": "subsettools",
+    "hf_hydrodata": "hf_hydrodata",
+    "parflow": "pftools"
+})
+
+# 3. Import everything
 import matplotlib.pyplot as plt
 import numpy as np
-import os
 from parflow import Run
 from parflow.tools.io import read_pfb, read_clm
-from parflow.tools.fs import mkdir
-from parflow.tools.settings import set_working_directory
 import hf_hydrodata as hf
 import subsettools as st
+
+print("✅ All modules loaded successfully!")
 ```
 
-github link https://github.com/HydroFrame-ML/high-res-WTD-static from Ma et al., 2026, "High resolution US water table depth estimates reveal quantity of accessible groundwater" https://www.nature.com/articles/s43247-025-03094-3
+rest of the code requires email sign-up: https://github.com/hydroframe/subsettools-binder/blob/main/subsettools/conus2_subsetting_transient.ipynb
 
-working with SUNDIALS? https://sundials.readthedocs.io/en/latest/sundials, https://github.com/llnl/sundials
+github link https://github.com/HydroFrame-ML/high-res-WTD-static from Ma et al., 2026 study, "High resolution US water table depth estimates reveal quantity of accessible groundwater" https://www.nature.com/articles/s43247-025-03094-3
+
+working with SUNDIALS: https://sundials.readthedocs.io/en/latest/sundials, https://github.com/llnl/sundials
+
+```python
+import sys
+import subprocess
+
+# Pythonic check to avoid extra runtime
+def check_sundials_interface():
+    try:
+        import sksundae
+        print("✅ scikit-sundae (SUNDIALS Interface) is already installed.")
+    except ImportError:
+        print("📦 Installing scikit-sundae...")
+        # scikit-sundae provides pre-built binaries for SUNDIALS solvers
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "scikit-sundae"])
+
+check_sundials_interface()
+
+# Import the CVODE integrator from the new interface
+from sksundae import cvode
+import numpy as np
+import matplotlib.pyplot as plt
+```
 
 
 ## qml_vqe_burgers.py
