@@ -49,7 +49,7 @@ rest of the code requires email sign-up: https://github.com/hydroframe/subsettoo
 
 github link https://github.com/HydroFrame-ML/high-res-WTD-static from Ma et al., 2026 study, "High resolution US water table depth estimates reveal quantity of accessible groundwater" https://www.nature.com/articles/s43247-025-03094-3
 
-working with SUNDIALS: https://sundials.readthedocs.io/en/latest/sundials, https://github.com/llnl/sundials
+working with SUNDIALS (shared classes for vectors, matrices, and algebraic solvers): https://sundials.readthedocs.io/en/latest/sundials, https://github.com/llnl/sundials
 
 ```python
 import sys
