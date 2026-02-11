@@ -5,7 +5,20 @@ A mixed bag of coding projects to work on with no unifying theme.
 
 working with parflow: https://parflow.readthedocs.io/en/latest/pftools.html, https://hydroframe.org/parflow-resources, https://hydroframe.org/parflow-conus1, https://hydroframe.org/parflow-conus2, https://parflow.org/, https://github.com/parflow/parflow
 
-working with hydroframe? https://hydroframe.org/hydrodata
+working with hydroframe: https://hydroframe.org/hydrodata, https://hydroframesubsettools.readthedocs.io/en/stable/getting_started.html
+
+```python
+pip install subsettools
+import matplotlib.pyplot as plt
+import numpy as np
+import os
+from parflow import Run
+from parflow.tools.io import read_pfb, read_clm
+from parflow.tools.fs import mkdir
+from parflow.tools.settings import set_working_directory
+import hf_hydrodata as hf
+import subsettools as st
+```
 
 github link https://github.com/HydroFrame-ML/high-res-WTD-static from Ma et al., 2026, "High resolution US water table depth estimates reveal quantity of accessible groundwater" https://www.nature.com/articles/s43247-025-03094-3
 
