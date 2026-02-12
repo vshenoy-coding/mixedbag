@@ -73,6 +73,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
+## sundials_numerical_methods.py
+
+The code utilizes the SUNDIALS (Suite of Nonlinear and Differential/Algebraic Equation Solvers) via the scikit-sundae Python interface to model complex physical diffusion processes and differential-algebraic systems. Example code of Self-Sustaining Oscillations, Differential Algebraic Equations (DAE), Method of Lines (PDE to ODE), 2D Heat Maps, Simulation Chaining, and
+3D Volumetric Diffusion are provided.
 
 ## qml_vqe_burgers.py
 
