@@ -1,6 +1,37 @@
 # mixedbag
 A mixed bag of coding projects to work on with no unifying theme.
 
+## emergent_vortex.py
+
+# Emergent Vortex Simulator
+
+Code exploring **Self-Organizing Criticality (SOC)** and **Non-Hydrostatic Meteorology** through the conceptual lens of **Brane Cosmology**.
+
+Models the dynamic attractor of emergent vortices, an emergent 2D vortex field, and the 3D structure of an emergent vortex. Demonstrates how random seeds dependent on unique system time in the "Bulk" self-organize into a stable rotational structure.
+
+
+## 🌌 Theoretical Framework
+
+According to Brane Cosmology — arising from string theory and M-theory — the universe floats in a higher-dimensional "bulk." Within this framework, self-organizing phenomena like vortices are neither completely deterministic nor completely stochastic. In the universe, the interaction between deterministic laws (gravity, electromagnetism) and stochastic noise (quantum fluctuations) creates a "Self-Organizing Criticality" that allows for stars, negentropy living biological matter, supercell storms, and vortices. 
+
+This simulation treats the atmosphere as a fluid moving on a curved manifold, where **"Self-Organizing Criticality"** is a consequence of how energy dissipates across the metric. The vortex emerges from the non-linear coupling between deterministic pressure gradients and stochastic noise, regulated by the **"geometric stiffness" (brane tension)** of the manifold.
+
+## 🛠️ The Mechanics
+
+Unlike standard kinematic models that use a fixed linear friction coefficient (e.g., $v \times 0.98$), this simulation implements **Non-linear Brane Damping**:
+
+$$\text{Velocity}_{\text{new}} = \text{Velocity}_{\text{old}} \cdot \left( \frac{1}{1 + \frac{v^2}{2\sigma}} \right)$$
+
+Where:
+* $v$ is the velocity magnitude.
+* $\sigma$ is the **Brane Tension** (Metric stiffness).
+
+This ensures that:
+1.  **Low-energy particles** move with near-zero resistance.
+2.  **High-energy particles** encounter massive "metric resistance," naturally forming a stable "eye" in the vortex, preventing numerical singularities.
+
+For the part of the code creating the generate_emergent_vortex and generate_3d_vortex functions, particle "kinetic energy" (speed) is mapped using the magma or inferno colormaps, visualizing how energy dissipates across the metric.
+
 working with parflow (integrated hydrology model that simulates surface and subsurface flow): https://parflow.readthedocs.io/en/latest/pftools.html, https://hydroframe.org/parflow-resources, https://hydroframe.org/parflow-conus1, https://hydroframe.org/parflow-conus2, https://parflow.org/, https://github.com/parflow/parflow
 
 working with hydroframe (repository of hydrologic observations, watershed characteristics and model simulations for the contiguous US): https://hydroframe.org/hydrodata, https://hydroframesubsettools.readthedocs.io/en/stable/getting_started.html
