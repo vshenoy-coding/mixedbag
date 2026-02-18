@@ -1,3 +1,9 @@
+######################################################################################################################################################
+# Mapping the Dynamic Attractor from Chaos Theory: not going to be exactly the same each time the code is run.
+# Think of time as a dimension with coordinates of how distribution and concentration of matter and energy can never be the exactly the same at each
+# at each coordinate along the dimension.
+######################################################################################################################################################
+
 import sys
 import subprocess
 
@@ -79,6 +85,10 @@ ani = FuncAnimation(fig, update, frames=200, interval=25, blit=True)
 plt.show()
 
 
+######################################################################################################################################################
+# Mapping the 2D emergent vortex: not going to be exactly the same each time the code is run.
+######################################################################################################################################################
+
 import sys
 import subprocess
 
@@ -92,12 +102,11 @@ def ensure_dependencies():
 
 ensure_dependencies()
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-def generate_emergent_vortex():
+def generate_2d_vortex():
     # 1. The Bulk Seed: Extracting unique data from the temporal Bulk
     # Each run samples a different "manifold state."
     # We use the system time to ensure the "Soil" is never the same twice.
@@ -151,8 +160,12 @@ def generate_emergent_vortex():
     plt.savefig('emergent_vortex.png', facecolor='black')
     plt.show()
 
-generate_emergent_vortex()
+generate_2d_vortex()
 
+
+######################################################################################################################################################
+# Mapping the 3D emergent vortex: not going to be exactly the same each time the code is run.
+######################################################################################################################################################
 
 import sys
 import subprocess
